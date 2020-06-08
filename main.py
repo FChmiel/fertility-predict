@@ -22,6 +22,7 @@ SOFTWARE."""
 
 import streamlit as st
 import altair as alt
+import sklearn
 import numpy as np
 import pandas as pd
 import plots
