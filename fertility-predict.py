@@ -28,10 +28,14 @@ import pandas as pd
 import plots
 import predict
 
-st.markdown('# Chance of obtaining an embryo suitable for D5 transfer'
-            ' or freezing')
+st.markdown('# A test web application for demonstrating the use of machine-learning methods in supporting fertility treatment.')
 
-st.markdown('This application uses data freely available to researchers (see Data availabilty section) to predict whether a fertility treatment (IVF/ICSI) will yield an embryo suitable for day 5 transfer or freezing. The methods supporting this application are currently out for peer review. It is meant as an educational tool and we do not recommend the use of this tool in clinical practice.')
+st.markdown('*The methods supporting this application are currently out for peer review. It is meant as an educational tool, in support of our publication, to help clinicians understand machine learning and its functionality. It is not clinically validated and is not for use in clinical practice or for diagnostic purposes.*')
+
+st.markdown('### Application usage')
+st.markdown('This application uses data freely available to researchers (see Data availability section) to predict whether a fertility treatment (IVF/ICSI) might yield an embryo suitable for day 5 transfer or freezing. The data have not be exploited in this way before, and we are unaware that any predictions made actually correspond to positive.')
+st.markdown('')
+st.markdown('Input to the model can be provided in the sidebar (right). This will change the models prediction (see \'Predicted chance of suitable embryo\') and will display the inputted parameters (red dashed line in graphics) in the context of historical fertility treatment (IVF/ICSI) cycles.')
 
 # set up the side bar for data input
 st.sidebar.title('Cycle information')
@@ -51,7 +55,7 @@ st.write("")
 st.markdown('### Model predictions: ')
 st.write(f'Age group: {age_group}')
 st.write(f'Oocyte count: {count}')
-st.write(f'Chance of suitable embryo : {pred*100:.1f} %')
+st.write(f'Predicted chance of suitable embryo : {pred*100:.1f} %')
 
 # Graphical output of model 
 st.markdown('### Prediction context')
@@ -66,4 +70,4 @@ st.markdown('Presented graphs and models were constructed using the 2015-2016 An
 
 st.markdown('## Disclaimer')
 
-st.markdown('This application is not clinically validated and is provided as an educational tool to supplement our publication. It should not be used in clinical practice.')
+st.markdown('The methods supporting this application are currently out for peer review. It is meant as an educational tool, in support of our publication, to help clinicians understand machine learning and its functionality. It is not clinically validated and is not for use in clinical practice or for diagnostic purposes.')
