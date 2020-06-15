@@ -41,7 +41,7 @@ st.markdown('Input to the model can be provided in the sidebar (right). This wil
 st.sidebar.title('Cycle information')
 age = st.sidebar.slider('Age (years):', value=18, min_value=18, max_value=50)
 count = st.sidebar.slider('Oocyte count:', value=0, min_value=0, max_value=50)
-possible_diagnosis = ['Ovulatory disorder', 'Male factor',
+possible_diagnosis = ['Tubal disease','Ovulatory disorder', 'Male factor',
                       'Endometriosis', 'Unexplained']
 diagnosis = st.sidebar.selectbox('Infertility diagnosis',
                                  possible_diagnosis,

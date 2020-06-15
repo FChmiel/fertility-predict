@@ -73,12 +73,12 @@ def create_infertility_feature(diagnosis):
         The one-hot encoded infertility feature.
     """
     # column index in feature matrix of feature
-    idx_dict = {'Ovulatory disorder':0, 'Male factor':1,
-                          'Endometriosis':3, 'Unexplained':2}
+    idx_dict = {'Tubal disease':0, 'Ovulatory disorder':1, 'Male factor':2,
+                          'Endometriosis':3, 'Unexplained':4}
 
     # create feature vector
     idx = idx_dict[diagnosis]
-    infertility = [0, 0, 0, 0]
+    infertility = [0,0, 0, 0, 0]
     infertility[idx] = 1
     return infertility
 
